@@ -1,11 +1,8 @@
 #!/bin/bash
 
 task = input("Enter the task description: ")
-
-priority = input("Enter the task's priority (high, medium, low): ").lower()
-
-time_bound = input("Is the task time-bound? (yes or no): ").lower()
-
+time_bound = input("Is the task time-bound? (yes or no): ")
+priority = input("Enter the task's priority (high, medium, low): ")
 match priority:
     case "high":
         reminder = f"The task '{task}' is of high priority."
@@ -15,8 +12,8 @@ match priority:
         reminder = f"The task '{task}' is of low priority."
     case _:
         reminder = f"The task '{task}' is an unknown priority level."
-
 if time_bound == "yes":
     reminder += " It requires immediate attention today!"
 print(reminder)
+
 
