@@ -20,7 +20,7 @@ def remove_item(shopping_list):
 
 def view_list(shopping_list):
     if shopping_list:
-        print("\nCurrent Shopping List:")
+        print("Current Shopping List:")
         for index, item in enumerate(shopping_list, start=1):
             print(f"'{index}'. {item}")
     else:
@@ -34,6 +34,7 @@ def main():
     while True:
         display_menu()
         choice = input("Choose an option (1-4): ").strip()
+        
 
         if choice == "1":
             add_item(shopping_list)
