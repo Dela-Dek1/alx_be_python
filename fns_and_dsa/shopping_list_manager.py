@@ -1,40 +1,36 @@
 def display_menu():
-    print("\nShopping List Manager")
-    print("1. Add an item")
-    print("2. Remove an item")
-    print("3. View the list")
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
     print("4. Exit")
 
 def add_item(shopping_list):
-    item = input("Enter the item to add: ").strip()
+    item = input("Enter the item name: ").strip()
     shopping_list.append(item)
-    if item:
-        if item in shopping_list:
-            print("'{item}' is already in the list.")
-        else:
-            shopping_list.append(item)
-            print("'{item}' has been added to the list.")
-    else:
-        print("Invalid item name.")
-
+    print(f"'{item}' has been added to the list.")
+    
 def remove_item(shopping_list):
     item = input("Enter the item to remove: ").strip()
     if item in shopping_list:
         shopping_list.remove(item)
-        print("'{item}' has been removed from the list.")
+        print(f"'{item}' has been removed from the list.")
     else:
-        print("'{item}' not found in the list.")
+        print(f"'{item}' not found in the list.")
 
 def view_list(shopping_list):
     if shopping_list:
         print("\nCurrent Shopping List:")
-        for i, item in enumerate(shopping_list, start=1):
-            print("{i}. {item}")
+        for index, item in enumerate(shopping_list, start=1):
+            print(f"'{index}'. {item}")
     else:
-        print("\nThe shopping list is empty.")
+        print("The shopping list is empty.")
 
 def main():
+    print("Shopping List Manager")
+    print("1. Add Item")
     shopping_list = []
+    add_item(shopping_list)
     while True:
         display_menu()
         choice = input("Choose an option (1-4): ").strip()
