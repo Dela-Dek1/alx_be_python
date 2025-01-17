@@ -10,10 +10,10 @@ def add_item(shopping_list):
     shopping_list.append(item)
     if item:
         if item in shopping_list:
-            print(f"'{item}' is already in the list.")
+            print("'{item}' is already in the list.")
         else:
             shopping_list.append(item)
-            print(f"'{item}' has been added to the list.")
+            print("'{item}' has been added to the list.")
     else:
         print("Invalid item name.")
 
@@ -21,15 +21,15 @@ def remove_item(shopping_list):
     item = input("Enter the item to remove: ").strip()
     if item in shopping_list:
         shopping_list.remove(item)
-        print(f"'{item}' has been removed from the list.")
+        print("'{item}' has been removed from the list.")
     else:
-        print(f"'{item}' not found in the list.")
+        print("'{item}' not found in the list.")
 
 def view_list(shopping_list):
     if shopping_list:
         print("\nCurrent Shopping List:")
         for i, item in enumerate(shopping_list, start=1):
-            print(f"{i}. {item}")
+            print("{i}. {item}")
     else:
         print("\nThe shopping list is empty.")
 
