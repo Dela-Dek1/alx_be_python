@@ -1,4 +1,4 @@
-import datetime # import the datetime module
+from datetime import datetime # import the datetime module
 
 def display_current_datetime():
 
