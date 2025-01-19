@@ -1,6 +1,6 @@
 
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 
 def convert_to_celsius(fahrenheit):
@@ -21,11 +21,11 @@ def main():
         
             if unit == "C":
                 converted = convert_to_fahrenheit(temperature)
-                print(f"{temperature}C is equivalent to {converted:.2f}F.")
+                print(f"{temperature}°C is equivalent to {converted:.2f}°F.")
 
             elif unit == "F":
                 converted = convert_to_celsius(temperature)
-                print(f"{temperature}F is equivalent to {converted:.2f}C.") 
+                print(f"{temperature}°F is equivalent to {converted:.2f}°C.") 
         
             else:
                 print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
