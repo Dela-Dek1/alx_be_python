@@ -13,31 +13,32 @@ def convert_to_fahrenheit(celsius):
     fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     return fahrenheit
 
-
-while True:
-    try:
-        temperature = float(input("Enter the temperature to convert: "))
-        unit = input("Is it in Celsius or Fahrenheit (C/F)? ").strip()
+def main():
+    while True:
+        try:
+            temperature = float(input("Enter the temperature to convert: "))
+            unit = input("Is it in Celsius or Fahrenheit (C/F)? ").strip()
         
-        if unit == "C":
-            converted = convert_to_fahrenheit(temperature)
-            print(f"{temperature}C is equivalent to {converted:.2f}F.")
+            if unit == "C":
+                converted = convert_to_fahrenheit(temperature)
+                print(f"{temperature}C is equivalent to {converted:.2f}F.")
 
-        elif unit == "F":
-            converted = convert_to_celsius(temperature)
-            print(f"{temperature}F is equivalent to {converted:.2f}C.") 
+            elif unit == "F":
+                converted = convert_to_celsius(temperature)
+                print(f"{temperature}F is equivalent to {converted:.2f}C.") 
         
-        else:
-            print("Invalid unit. Please enter "C" for Celsius or "F" for Fahrenheit.")
+            else:
+                print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+            exit_choice = input("Do you want to convert another temperature? (yes/no): ").strip().lower()
+            if exit_choice == "no":
+                print("Goodbye!")
+                break
 
 
-    except ValueError:
-        print("Invalid temperature. Please enter a numeric value.")
+        except ValueError:
+            print("Invalid temperature. Please enter a numeric value.")
 
-    exit_choice = input("Do you want to convert another temperature? (yes/no): ").strip().lower()
-    if exit_choice == "no":
-        print("Goodbye!")
-        break
+    
 
      
 
